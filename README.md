@@ -15,4 +15,8 @@
 ### Dev Log
 
 1. Installed the gridsome command line toolkit via `sudo npm install --global @gridsome/cli`
-2. Gridsome project created  and linked to github repo
+2. Gridsome project created `npm install --global @gridsome/cli` and linked to github repo:
+  * `git init`
+  * `git remote add origin <Remote repository URL>`
+  * `git add .`
+  * `git commit -am "Gridsome setup"`
