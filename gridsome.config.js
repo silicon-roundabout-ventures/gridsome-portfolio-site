@@ -8,8 +8,10 @@
 // See: https://gridsome.org/plugins/@gridsome/source-contentful
 // And:
 
+const tailwindcss = require("tailwindcss")
+
 module.exports = {
-  siteName: 'Silicon Roundabout Ventures',
+  siteName: 'Silicon Roundabout Ventures Template',
   templates: {
    ContentfulBlogPost: '/blog/:slug'
   },
