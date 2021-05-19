@@ -141,3 +141,15 @@
     }
     </script>
   ```
+
+
+
+
+
+### TODO
+
+* At localhost:8080/blog you should see a listing of blogs (assuming you've added a published at least one in Contentful). Clicking on any of the blogs will yield no results just yet. This is because we need a way for gridsome to read our markdown from Contentful: e.g. add the tool "Markdown-It" via npm.
+* Create our blog template.
+* Modify our Default.vue layout and update the Index.vue page (aka, the home).
+* Customizing our Header and Footer (Default.vue layout)
+* Add a few modifications and styling
