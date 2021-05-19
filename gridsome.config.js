@@ -11,8 +11,10 @@
 //Add Tailwindcsss to gridsome
 const tailwindcss = require("tailwindcss")
 
+const tailwindcss = require("tailwindcss")
+
 module.exports = {
-  siteName: 'Silicon Roundabout Ventures',
+  siteName: 'Silicon Roundabout Ventures Template',
   templates: {
    ContentfulBlogPost: '/blog/:slug'
   },
