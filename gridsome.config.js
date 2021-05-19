@@ -6,7 +6,10 @@
 
 // Currently using Contentful (headless CMS) to manage blog content
 // See: https://gridsome.org/plugins/@gridsome/source-contentful
-// And:
+
+
+//Add Tailwindcsss to gridsome
+const tailwindcss = require("tailwindcss")
 
 module.exports = {
   siteName: 'Silicon Roundabout Ventures',
