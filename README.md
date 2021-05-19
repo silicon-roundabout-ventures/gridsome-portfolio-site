@@ -1,10 +1,14 @@
-# Silicon Roundabout Ventures new JAMstack website
+# Gridsome Portfolio JAMstack website with TailwindCSS and Conentful CMS
+## *by Silicon Roundabout Ventures*
 
 ## Overview
-
+TBD
 
 ## Stack used
  * Gridsome
+ * vue
+ * tailwindcss
+ * Contentful
 
 ### Gridsome infrastructure
 `.vue` components in the `src/pages` directory create page routes. `gridsome build` generates static files in a `/dist` folder. [Here](https://gridsome.org/docs/core-concepts/) you can find the key concepts behind the gridsome architecture.
@@ -15,6 +19,7 @@
 * text editor (Atom)
 * terminal
 * npm
+  * Markdown package
 
 ### Dev Log
 
