@@ -1,8 +1,11 @@
 # Gridsome Portfolio JAMstack website with TailwindCSS and Conentful CMS
 ## *by Silicon Roundabout Ventures*
 
-## Overview
-TBD
+## Project Overview
+
+Template containig a baic girdsome project for a portfolio website (e.g. for a VC or PE firm)
+
+
 
 ## Stack used
  * Gridsome
@@ -16,12 +19,23 @@ TBD
 
 ### Tools used
 
-* text editor (Atom)
+* text editor (Atom in my case with a few useful [JS plugins](https://www.voidcanvas.com/12-must-have-atom-extensions-to-work-in-javascript/))
 * terminal
 * npm
   * Markdown package
 
 ### Dev Log
+
+### Summary
+
+1. Created a new girdsome project
+2. Signed up and created a Contentful account and blog
+3. Configured our Contentful connection to our website
+4. Added TailwindCSS to the website (and addressed potential compatibility issues)
+5. Added markdown-it so our website can read the markdown that Contentful sends it
+6. Created a Blog.vue page to view a list of all blogs
+7. Created a ContentfulBlogPost.vue template to see the individual blog posts
+
 
 #### 1. Project setup:
   1. Installed the gridsome command line toolkit via `sudo npm install --global @gridsome/cli`
@@ -146,15 +160,14 @@ TBD
     }
     </script>
   ```
-
+#### 6. Editing the menu bar
+1. Edit the Default (Gridsome [Layouts](https://gridsome.org/docs/layouts/)): add `<g-link class="nav__link" to="/blog/">Blog</g-link>` and `<g-link class="nav__link" to="/frequently-asked-questions/">FAQ</g-link>` below `<g-link class="nav__link" to="/about/">About</g-link>.`
 
 
 
 
 ### TODO
 
-* At localhost:8080/blog you should see a listing of blogs (assuming you've added a published at least one in Contentful). Clicking on any of the blogs will yield no results just yet. This is because we need a way for gridsome to read our markdown from Contentful: e.g. add the tool "Markdown-It" via npm.
-* Create our blog template.
-* Modify our Default.vue layout and update the Index.vue page (aka, the home).
+* Modify our Default.vue layout and update the Index.vue page (aka, the home). *(doing)*
 * Customizing our Header and Footer (Default.vue layout)
 * Add a few modifications and styling

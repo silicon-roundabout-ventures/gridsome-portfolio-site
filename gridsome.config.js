@@ -7,36 +7,33 @@
 // Currently using Contentful (headless CMS) to manage blog content
 // See: https://gridsome.org/plugins/@gridsome/source-contentful
 
-
-//Add Tailwindcsss to gridsome
-const tailwindcss = require("tailwindcss")
-
-const tailwindcss = require("tailwindcss")
+// Add Tailwindcsss to gridsome
+const tailwindcss = require('tailwindcss')
 
 module.exports = {
   siteName: 'Silicon Roundabout Ventures Template',
   templates: {
-   ContentfulBlogPost: '/blog/:slug'
+    ContentfulBlogPost: '/blog/:slug'
   },
   plugins: [
     {
-    use: "@gridsome/source-contentful",
+      use: '@gridsome/source-contentful',
       options: {
-      space: process.env.CONTENTFUL_SPACE,
-      accessToken: process.env.CONTENTFUL_TOKEN,
-      host: "cdn.contentful.com",
-      environment: process.env.CONTENTFUL_ENVIRONMENT,
-      typename: "Contentful"
+        space: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_TOKEN,
+        host: 'cdn.contentful.com',
+        environment: process.env.CONTENTFUL_ENVIRONMENT,
+        typename: 'Contentful'
+      }
     }
-}
-],
- css: {
-  loaderOptions: {
-    postcss: {
-      plugins: [
-        tailwindcss
-      ],
-    },
-  },
- }
+  ],
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          tailwindcss
+        ]
+      }
+    }
+  }
 }

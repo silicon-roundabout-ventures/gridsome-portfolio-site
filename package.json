@@ -10,6 +10,7 @@
     "@gridsome/source-contentful": "^0.6.0",
     "autoprefixer": "^9.8.6",
     "gridsome": "^0.7.0",
+    "markdown-it": "^12.0.6",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
     "vue": "^2.6.12"
