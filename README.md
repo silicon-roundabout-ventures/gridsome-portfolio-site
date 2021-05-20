@@ -5,11 +5,16 @@
 
 Template containig a baic girdsome project for a portfolio website (e.g. for a VC or PE firm)
 
+## Installation Instructions
+1. If you use `npm`, install the packages with `install npm`
+2. Register and Create a space on Contentful
+3. Create a `.env` file to store your own API keys from Contentful (`Settings >> API Keys`) *(If you're not sure how to do this, see how I did it in the development log below)*
+4. Run `gridsome develop` to run your local server
+5. Your site should be live at http://localhost:8080)
 
 
 ## Stack used
- * Gridsome
- * vue
+ * Gridsome (based on Vue)
  * tailwindcss
  * Contentful
 
@@ -160,6 +165,9 @@ Template containig a baic girdsome project for a portfolio website (e.g. for a V
     }
     </script>
   ```
+  3. Install Markdown-it: `npm install markdown-it` to read the content from Contentful
+
+
 #### 6. Editing the menu bar
 1. Edit the Default (Gridsome [Layouts](https://gridsome.org/docs/layouts/)): add `<g-link class="nav__link" to="/blog/">Blog</g-link>` and `<g-link class="nav__link" to="/frequently-asked-questions/">FAQ</g-link>` below `<g-link class="nav__link" to="/about/">About</g-link>.`
 
@@ -171,3 +179,20 @@ Template containig a baic girdsome project for a portfolio website (e.g. for a V
 * Modify our Default.vue layout and update the Index.vue page (aka, the home). *(doing)*
 * Customizing our Header and Footer (Default.vue layout)
 * Add a few modifications and styling
+
+
+
+### Debugging
+
+Deepgodara (github user) reported the following error:
+```
+Error: A content type for the ContentfulBlogPost template does not exist.
+    at /Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/plugins/TemplatesPlugin.js:238:17
+    at Plugins.run (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/app/Plugins.js:141:17)
+    at Plugins.createSchema (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/app/Plugins.js:85:32)
+    at Object.fn (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/app/Plugins.js:30:18)
+    at fn (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/app/App.js:72:27)
+    at _next0 (eval at create (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/tapable/lib/HookCodeFactory.js:74:10), <anonymous>:47:17)
+    at eval (eval at create (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/tapable/lib/HookCodeFactory.js:74:10), <anonymous>:65:1)
+    at processTicksA
+```
