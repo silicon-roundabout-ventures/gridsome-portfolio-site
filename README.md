@@ -6,20 +6,26 @@
 Template containig a baic girdsome project for a portfolio website (e.g. for a VC or PE firm)
 
 ## Installation Instructions
-1. If you use `npm`, install the packages with `install npm`
-2. Register and Create a space on Contentful
-3. Create a `.env` file to store your own API keys from Contentful (`Settings >> API Keys`) *(If you're not sure how to do this, see how I did it in the development log below)*
-4. Run `gridsome develop` to run your local server
-5. Your site should be live at http://localhost:8080)
+1. You should have Node and NPM (or Yarn) installed on your machine:
+  * On Linux, you can probably do it via `sudo apt get node` (double check for your distro)
+  * On a Mac, you're better off going via Homebrew (see how to install/update it [here](https://brew.sh/) if you don't have it or it's out of date): `brew install node`
+2. `npm install --global @gridsome/cli` (you might have to give it root access by prepending `sudo`)
+3. If you use `npm`, install the packages with `npm install` (with Yarn it's `yarn install`)
+4. Register and Create a space on Contentful
+5. Create a `.env` file to store your own API keys from Contentful (`Settings >> API Keys`) *(If you're not sure how to do this, see how I did it in the development log below)*
+6. Run `gridsome develop` to run your local server
+7. Your site should be live at http://localhost:8080)
 
 
 ## Stack used
+ * Node
  * Gridsome (based on Vue)
- * tailwindcss
+ * GraphQL (via Gridsome)
+ * TailwindCSS
  * Contentful
 
 ### Gridsome infrastructure
-`.vue` components in the `src/pages` directory create page routes. `gridsome build` generates static files in a `/dist` folder. [Here](https://gridsome.org/docs/core-concepts/) you can find the key concepts behind the gridsome architecture.
+The packages used in the project are stored in `package.json` automatically. The settings for the project are set in `gridsome.config.js`. `.vue` components go in the `src` directory and create page routes `src/pages`, page templates `src/templates`, page components `components`, or layouts (think Header/Footer) `layouts`. `gridsome build` generates static files in a `/dist` folder. It's also best practice to store other assets in `src` such as any CSS files (e.g. in a custom `src/assets/css`). [Here](https://gridsome.org/docs/core-concepts/) you can find the key concepts behind the gridsome architecture.
 
 
 ### Tools used
