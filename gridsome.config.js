@@ -11,11 +11,17 @@
 const tailwindcss = require('tailwindcss')
 
 module.exports = {
+  // Website key setup parameters
   siteName: 'Silicon Roundabout Ventures Template',
+
+  // Define templates
   templates: {
     ContentfulBlogPost: '/blog/:slug'
   },
+
+  // Define/Setup Gridsome plugins used
   plugins: [
+    // Contentful plugin
     {
       use: '@gridsome/source-contentful',
       options: {
@@ -27,6 +33,8 @@ module.exports = {
       }
     }
   ],
+
+  // Define CSS options
   css: {
     loaderOptions: {
       postcss: {

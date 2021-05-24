@@ -2,22 +2,32 @@
 ## *by Silicon Roundabout Ventures*
 
 ## Project Overview
-
 Template containig a baic girdsome project for a portfolio website (e.g. for a VC or PE firm)
+
+---
 
 ## Installation Instructions
 1. You should have Node and NPM (or Yarn) installed on your machine:
   * On Linux, you can probably do it via `sudo apt get node` (double check for your distro)
-  * On a Mac, you're better off going via Homebrew (see how to install/update it [here](https://brew.sh/) if you don't have it or it's out of date): `brew install node`
+  * On a Mac, you're better off going via [NVM](https://tecadmin.net/install-nvm-macos-with-homebrew/) or Homebrew (see how to install/update it [here](https://brew.sh/) if you don't have it or it's out of date): `nvm install node` (NVM) / `brew install node` (Homebrew).
 2. `npm install --global @gridsome/cli` (you might have to give it root access by prepending `sudo`)
-3. If you use `npm`, install the packages with `npm install` (with Yarn it's `yarn install`)
+3. Go to the root directory of this project by entering the folder via terminal. If you use `npm`, install the packages with `npm install` (with Yarn it's `yarn install`)
 4. Register and Create a space on Contentful
-5. Create a `.env` file to store your own API keys from Contentful (`Settings >> API Keys`) *(If you're not sure how to do this, see how I did it in the development log below)*
+5. Create a `.env` file in the root directory of this project to store your own API keys from Contentful (`Settings >> API Keys`) *(If you're not sure how to do this, see how I did it in the development log below)*
 6. Run `gridsome develop` to run your local server
 7. Your site should be live at http://localhost:8080)
 
 
-## Stack used
+### Tools used to build
+* text editor (Atom in my case with a few useful [JS plugins](https://www.voidcanvas.com/12-must-have-atom-extensions-to-work-in-javascript/))
+* terminal
+* npm
+  * Markdown-it package
+
+
+---
+
+## Stack
  * Node
  * Gridsome (based on Vue)
  * GraphQL (via Gridsome)
@@ -28,17 +38,10 @@ Template containig a baic girdsome project for a portfolio website (e.g. for a V
 The packages used in the project are stored in `package.json` automatically. The settings for the project are set in `gridsome.config.js`. `.vue` components go in the `src` directory and create page routes `src/pages`, page templates `src/templates`, page components `components`, or layouts (think Header/Footer) `layouts`. `gridsome build` generates static files in a `/dist` folder. It's also best practice to store other assets in `src` such as any CSS files (e.g. in a custom `src/assets/css`). [Here](https://gridsome.org/docs/core-concepts/) you can find the key concepts behind the gridsome architecture.
 
 
-### Tools used
-
-* text editor (Atom in my case with a few useful [JS plugins](https://www.voidcanvas.com/12-must-have-atom-extensions-to-work-in-javascript/))
-* terminal
-* npm
-  * Markdown package
+---
 
 ### Dev Log
-
-### Summary
-
+#### Summary
 1. Created a new girdsome project
 2. Signed up and created a Contentful account and blog
 3. Configured our Contentful connection to our website
@@ -74,7 +77,7 @@ The packages used in the project are stored in `package.json` automatically. The
     *Note: if you use this repo, you will need to create your own .env file and set up your own variables*
   5. Contentful is now set up and ready to be linked to your Gridsome site
 
-### 3. Set up and integratre Tailwind CSS:
+#### 3. Set up and integratre Tailwind CSS:
   1. Tailwind installed and initialised: `npm i tailwindcss`, `npx tailwind init`
   2. Global CSS file created in `src/assets/css` called `global.css` (folders under src manually created in the process, as a slight variation from the default Tailwind [setup for Vue](https://tailwindcss.com/docs/guides/vue-3-vite). File text:
   ```
@@ -178,27 +181,17 @@ The packages used in the project are stored in `package.json` automatically. The
 1. Edit the Default (Gridsome [Layouts](https://gridsome.org/docs/layouts/)): add `<g-link class="nav__link" to="/blog/">Blog</g-link>` and `<g-link class="nav__link" to="/frequently-asked-questions/">FAQ</g-link>` below `<g-link class="nav__link" to="/about/">About</g-link>.`
 
 
+---
 
 
 ### TODO
-
 * Modify our Default.vue layout and update the Index.vue page (aka, the home). *(doing)*
 * Customizing our Header and Footer (Default.vue layout)
 * Add a few modifications and styling
 
 
+---
+
 
 ### Debugging
-
-Deepgodara (github user) reported the following error:
-```
-Error: A content type for the ContentfulBlogPost template does not exist.
-    at /Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/plugins/TemplatesPlugin.js:238:17
-    at Plugins.run (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/app/Plugins.js:141:17)
-    at Plugins.createSchema (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/app/Plugins.js:85:32)
-    at Object.fn (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/app/Plugins.js:30:18)
-    at fn (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/gridsome/lib/app/App.js:72:27)
-    at _next0 (eval at create (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/tapable/lib/HookCodeFactory.js:74:10), <anonymous>:47:17)
-    at eval (eval at create (/Users/deep/Documents/GitHub/gridsome-portfolio-site/node_modules/tapable/lib/HookCodeFactory.js:74:10), <anonymous>:65:1)
-    at processTicksA
-```
+No compiling issues found as of May 2021. Tested on Linux (CentoOS 8.3) and Mac (OS 10.13)
